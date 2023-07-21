@@ -1,0 +1,257 @@
+@import '_variable.scss';
+@import '_mixin.scss';
+
+.about {
+  padding-top: 30px;
+  padding-bottom: 69px;
+  background-color: $backgroundColor;
+}
+.about__list {
+  @include clearListStyles;
+  display: flex;
+}
+.about__item {
+  min-width: 48.7%;
+}
+.about__left {
+  margin-right: 30px;
+}
+.about__title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 2px;
+  color: $textWhiteColor;
+  font-family: 'TTFirsNeue';
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+}
+.about__desc {
+  padding: 0;
+  margin: 0;
+  padding-top: 3px;
+  color: $textGreyColor;
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+}
+.about__right-picture {
+  height: 255px;
+  width: 100%;
+  background-image: url("../img/photocamera.webp");
+  background-repeat: no-repeat;
+}
+.about__right-follow {
+  padding: 0;
+  margin: 0;
+  padding-top: 25px;
+  margin-bottom: 16px;
+  color: $textWhiteColor;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 22px;
+  font-family: 'TTFirsNeue';
+}
+.about__right-form {
+  display: flex;
+  align-items: center;
+  & input {
+    padding-top: 16px;
+    padding-left: 23px;
+    padding-bottom: 17px;
+    margin-right: 32px;
+    min-width: 75%;
+    outline: none;
+    border: 1px solid transparent;
+    background-color: $inputColor;
+    transition: border-color 0.5s ease-in-out, color 0.5s ease-in-out;
+    placeholder {
+      font-family: 'Roboto';
+      color: $textGreyColor;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+  & input:focus-visible {
+    border: 1px solid $hoverColor;
+    color: $textGreyColor;
+  }
+  & input:hover {
+    color: $hoverColor;
+  }
+  & input:active {
+    color: $textWhiteColor;
+  }
+}
+.about__right-box {
+  display: flex;
+  min-width: 80%;
+  flex-direction: column-reverse;
+  position: relative;
+}
+.just-validate-error-label {
+  padding-left: 23px;
+  position: absolute;
+  content: '';
+  top: 5px;
+  left: 0;
+  height: 100%;
+  pointer-events: none;
+  color: $redColor;
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 9px;
+  line-height: 11px;
+}
+.about__right-send {
+  @include clearBtnStyle;
+  padding: 12.5px 19px;
+  color: $textWhiteColor;
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  background-color: $hoverColor;
+  border: 3px solid transparent;
+  transition: background-color 0.5s ease-in-out, border-color 0.5s ease-in-out;
+  &:focus-visible {
+    outline: none;
+    border-color: $activeColor;
+    background-color: $hoverColor;
+  }
+  &:hover {
+    background-color: $focusColor;
+  }
+  &:active {
+    background-color: $activeColor;
+  }
+}
+
+@media (max-width: 1366px) and (min-width: 993px) {
+  .about {
+    padding-bottom: 81px;
+    &__title {
+      margin-bottom: 2px;
+    }
+    &__item {
+      min-width: 48.42%;
+    }
+    &__left {
+      margin-right: 30px;
+    }
+    &__right-follow {
+      margin-bottom: 15px;
+    }
+    &__right-form {
+      align-items: flex-start;
+      flex-direction: column;
+      input {
+        margin-bottom: 20px;
+        min-width: 100%;
+        background-color: $inputColor;
+      }
+    }
+    &__right-picture {
+      height: 332px;
+      background-image: url("../img/photocamera1024.webp");
+      background-repeat: no-repeat;
+    }
+  }
+  .about__right-box {
+    min-width: 73%;
+  }
+}
+@media (max-width: 992px) and (min-width: 577px) {
+  .about {
+    padding-bottom: 62px;
+    &__left {
+      margin-right: 24px;
+    }
+    &__title {
+      margin-bottom: 2px;
+    }
+    &__desc {
+      padding-top: 3px;
+    }
+    &__right-picture {
+      height: 569px;
+      background-image: url("../img/photocamera768.webp");
+      background-repeat: no-repeat;
+    }
+    &__right-box {
+      margin-bottom: 21px;
+      min-width: 98%;
+    }
+    &__right-form {
+      align-items: flex-start;
+      flex-direction: column;
+      input {
+        margin-right: 0;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        background-color: $inputColor;
+      }
+    }
+    &__right-follow {
+      margin-bottom: 16px;
+      padding-top: 24px;
+    }
+  }
+}
+@media (max-width: 576px) and (min-width: 320px) {
+  .about {
+    padding-bottom: 60.5px;
+    padding-top: 28px;
+    &__title {
+      margin: 0;
+      margin-bottom: 1px;
+      font-size: 18px;
+    }
+    &__list {
+      flex-direction: column;
+    }
+    &__item {
+      min-width: 100%;
+    }
+    &__left {
+      margin-bottom: 22px;
+    }
+    &__desc {
+      padding: 0;
+      font-size: 14px;
+      line-height: 25px;
+    }
+    &__right-follow {
+      padding-top: 26px;
+      margin-bottom: 14px;
+      font-size: 18px;
+      line-height: 22px;
+    }
+    &__right-picture {
+      height: 278px;
+      background-image: url("../img/photocamera320.webp");
+      background-repeat: no-repeat;
+    }
+    &__right-form {
+      flex-direction: column;
+      align-items: flex-start;
+      & input {
+        margin-bottom: 20px;
+        padding-top: 10px;
+        padding-bottom: 13px;
+        padding-left: 23px;
+        min-width: 100%;
+        & placeholder {
+          font-size: 14px;
+        }
+      }
+    }
+    &__right-send {
+      padding: 7px 19px;
+      font-size: 14px;
+    }
+
+  }
+}

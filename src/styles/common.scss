@@ -1,0 +1,68 @@
+@import '_variable.scss';
+
+* {
+  box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', 'TTFirsNeue', sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: $containerMaxwidth;
+}
+
+@media (max-width: 1366px) and (min-width: 993px) {
+  .container {
+    margin: 0 31px;
+  }
+}
+@media (max-width: 992px) and (min-width: 577px) {
+  .container {
+    margin: 0 27px;
+  }
+}
+@media (max-width: 576px) and (min-width: 320px) {
+  .container {
+    margin: 0 21px;
+  }
+}
+@font-face {
+  font-family: "Roboto";
+  src:
+    url("../fonts/Roboto-Regular.woff2") format("woff2"),
+    url("../fonts/Roboto-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src:
+    url("../fonts/Roboto-Bold.woff2") format("woff2"),
+    url("../fonts/Roboto-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+  font-family: "TTFirsNeue";
+  src:
+    url("../fonts/TTFirsNeue-Bold.woff2") format("woff2"),
+    url("../fonts/TTFirsNeue-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+  font-family: "TTFirsNeue";
+  src:
+    url("../fonts/TTFirsNeue-Regular.woff2") format("woff2"),
+    url("../fonts/TTFirsNeue-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+

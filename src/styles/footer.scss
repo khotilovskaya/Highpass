@@ -1,0 +1,143 @@
+@import '_variable.scss';
+@import '_mixin.scss';
+
+.footer {
+  background-color: $backgroundColor;
+  &__list {
+    @include clearListStyles;
+    padding-top: 20px;
+    padding-bottom: 16px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__left-text {
+    margin: 0;
+    padding: 0;
+    font-family: 'TTFirsNeue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: $inputTextColor;
+  }
+  &__center-text {
+    margin: 0;
+    padding: 0;
+    padding-top: 3px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: $textGreyColor;
+  }
+  &__right-desc {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 9px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: $textGreyColor;
+  }
+  &__logo:focus-visible {
+    outline: none;
+  }
+}
+.left {
+  margin-right: 200px;
+  align-items: flex-start;
+}
+.center {
+  margin-right: auto;
+}
+.social-list {
+  @include clearListStyles;
+  display: flex;
+  align-items: center;
+}
+.social-item:not(:last-child) {
+  margin-right: 20px;
+}
+.social-link svg {
+  transition: fill 0.5s ease-in-out;
+  fill: $textGreyColor;
+  &:hover {
+    fill: $hoverColor;
+  }
+  &:active {
+    fill: $activeColor;
+  }
+}
+.social-link:focus-visible {
+  outline: none;
+  & svg {
+    fill: $focusColor;
+  }
+}
+@media (max-width: 1366px) and (min-width: 993px) {
+  .footer {
+    &__list {
+      padding-top: 22px;
+      padding-bottom: 15px;
+      display: flex;
+      align-items: center;
+    }
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  .left {
+    margin-right: 135px;
+    align-items: flex-start;
+  }
+  .center {
+    margin-right: auto;
+  }
+}
+@media (max-width: 992px) and (min-width: 577px) {
+  .footer__list {
+    padding-top: 23px;
+    justify-content: space-between;
+  }
+  .center {
+    display: none;
+  }
+}
+@media (max-width: 576px) and (min-width: 320px) {
+  .footer__container {
+    margin: 0;
+    padding: 0;
+  }
+  .footer__list {
+    padding-top: 31px;
+    padding-bottom: 0;
+    flex-direction: column-reverse;
+  }
+  .center {
+    display: none;
+  }
+  .right {
+    padding-bottom: 27px;
+  }
+  .footer__left-text {
+    font-size: 10px;
+  }
+  .left {
+    margin: 0;
+    padding-bottom: 7px;
+    padding-top: 12px;
+    align-items: center;
+    background-color: $inputColor;
+    width: 100%;
+  }
+}

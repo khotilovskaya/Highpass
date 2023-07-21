@@ -1,0 +1,590 @@
+@import '_variable.scss';
+@import '_mixin.scss';
+
+.projects {
+  padding-top: 68px;
+  padding-bottom: 68px;
+  &__content {
+    margin-bottom: auto;
+  }
+  &__title {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 12px;
+    color: $backgroundColor;
+    font-family: 'TTFirsNeue';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+  }
+  &__grid {
+    width: 100%;
+    display: grid;
+    grid-gap: 30px 30px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-flow: row;
+    @include clearListStyles;
+  }
+  &__card {
+    min-height: 300px;
+  }
+  &__card:nth-child(1) {
+    grid-column: 1/3;
+  }
+  &__card:nth-child(2) {
+    grid-column: 3/5;
+  }
+  &__card:nth-child(3) {
+    grid-column: 5/7;
+  }
+  &__card:nth-child(4) {
+    grid-column: 7/13;
+  }
+  &__card:nth-child(5) {
+    grid-column: 1/7;
+  }
+  &__card:nth-child(6) {
+    grid-column: 7/10;
+  }
+  &__card:nth-child(7) {
+    grid-column: 10/13;
+  }
+  &__article {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  &__desc {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
+    padding-top: 18px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: $backgroundColor;
+  }
+  &__data {
+    display: flex;
+    align-items: center;
+    & img {
+      margin-right: 4px;
+    }
+    & span {
+      font-family: 'Roboto';
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 22px;
+      color: $textGrafitColor;
+    }
+  }
+}
+.landscape__picture {
+  position: relative;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 184px;
+  background-size: cover;
+  background-image: url("../img/landscape.webp");
+}
+.label {
+  position: absolute;
+  content: '';
+  padding: 6px 14px;
+  top: 7px;
+  right: 7px;
+  color: $textWhiteColor;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  background-color: $backgroundColor;
+}
+.portretman__picture {
+  position: relative;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 184px;
+  background-size: cover;
+  background-image: url("../img/portretman.webp");
+}
+.subject__picture {
+  position: relative;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 184px;
+  background-size: cover;
+  background-image: url("../img/subject.webp");
+}
+.article {
+  &__container {
+    padding: 22px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+.article-title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 6px;
+  font-family: 'TTFirsNeue';
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  color: $textWhiteColor;
+}
+.about-btn {
+  @include clearBtnStyle;
+  padding: 12.5px 19px;
+  color: $textWhiteColor;
+  border: 3px solid $hoverColor;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: 'Roboto';
+  transition: border-color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+  &:focus-visible {
+    background-color: $focusColor;
+    outline: none;
+  }
+  &:hover {
+    background-color: $hoverColor;
+  }
+  &:active {
+    background-color: $activeColor;
+    border-color: $activeColor;
+  }
+}
+.fuji__picture {
+  position: relative;
+  width: 100%;
+  min-height: 300px;
+  background-size: cover;
+  background-image: url("../img/back_fuji.png");
+  background-repeat: no-repeat;
+}
+.fuji {
+  &__article {
+    padding: 22px 0 30px 30px;
+  }
+  &__content {
+    margin-bottom: 54px;
+    width: 49%;
+  }
+  &__desc {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: $textWhiteColor;
+  }
+}
+.project__picture {
+  position: relative;
+  width: 100%;
+  min-height: 300px;
+  background-size: cover;
+  background-image: url("../img/back_project.png");
+  background-repeat: no-repeat;
+}
+.retouch__picture {
+  position: relative;
+  width: 100%;
+  height: 184px;
+  background-size: cover;
+  background-image: url("../img/retouch.png");
+  background-repeat: no-repeat;
+}
+.portretwoman__picture {
+  position: relative;
+  width: 100%;
+  height: 184px;
+  background-size: cover;
+  background-image: url("../img/portretwoman.png");
+  background-repeat: no-repeat;
+}
+.project{
+  &__article {
+    padding: 22px 0 30px 30px;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__content {
+    margin-bottom: 100px;
+    width: 48%;
+  }
+  &__desc {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: $textWhiteColor;
+  }
+}
+.subject__desc {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.fuji-data {
+  margin-bottom: 2px;
+  & span {
+    color: $textWhiteColor;
+  }
+}
+
+.calendar {
+  margin-right: 4px;
+}
+@media (max-width: 1366px) and (min-width: 993px) {
+  .projects {
+    &__grid {
+      grid-gap: 24px 30px;
+      grid-template-columns: repeat(8, 1fr);
+    }
+    &__card:nth-child(1) {
+      grid-column: 1/3;
+      min-height: 285px;
+    }
+    &__card:nth-child(2) {
+      grid-column: 3/5;
+      min-height: 285px;
+    }
+    &__card:nth-child(3) {
+      grid-column: 5/9;
+      min-height: 285px;
+    }
+    &__card:nth-child(4) {
+      grid-column: 1/6;
+      min-height: 307px;
+    }
+
+    &__card:nth-child(5) {
+      grid-column: 4/9;
+      order: 1;
+      min-height: 307px;
+    }
+    &__card:nth-child(6) {
+      grid-column: 6/9;
+      min-height: 285px;
+    }
+    &__card:nth-child(7) {
+      grid-column: 1/4;
+      min-height: 307px;
+    }
+    &__article {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    &__desc {
+      margin-bottom: 16px;
+      padding-top: 17px;
+    }
+    &__data {
+      & img {
+        margin-right: 4px;
+      }
+      & span {
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 22px;
+        color: $textGrafitColor;
+      }
+    }
+  }
+  .landscape__picture {
+    background-image: url("../img/landscape1024.webp");
+  }
+  .portretman__picture {
+    background-image: url("../img/portretman1024.webp");
+  }
+  .subject__picture {
+    background-image: url("../img/subject1024.webp");
+  }
+  .retouch__picture {
+    background-image: url("../img/retouch_1024.png");
+  }
+  .portretwoman__picture {
+    background-image: url("../img/portretwoman_1024.png");
+  }
+  .article {
+    &__container {
+      padding: 22px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+  .article-title {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 6px;
+    font-family: 'TTFirsNeue';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    color: $textWhiteColor;
+  }
+  .fuji__picture {
+    min-height: 307px;
+    background-image: url("../img/fuji_1024.png");
+  }
+  .fuji {
+    &__article {
+      padding: 32px 0 30px 30px;
+    }
+    &__content {
+      margin-bottom: 34px;
+      width: 52%;
+    }
+    &__desc {
+      padding-top: 0;
+      line-height: 22px;
+    }
+  }
+  .project__picture {
+    min-height: 307px;
+    background-image: url("../img/project_1024.png");
+  }
+  .project {
+    &__article {
+      padding: 32px 0 30px 30px;
+    }
+    &__content {
+      margin-bottom: 81px;
+      width: 52%;
+    }
+    &__desc {
+      padding-top: 0;
+    }
+  }
+  .calendar {
+    margin-right: 4px;
+  }
+  .portretman__desc, .landscape__desc {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+@media (max-width: 992px) and (min-width: 577px) {
+  .projects {
+    &__grid {
+      grid-gap: 26.7px 30px;
+      grid-template-columns: repeat(6, 1fr);
+      justify-content: space-between;
+    }
+    &__card:nth-child(1) {
+      grid-column: 1/3;
+      min-height: 300px;
+    }
+    &__card:nth-child(2) {
+      grid-column: 3/5;
+      min-height: 300px;
+    }
+    &__card:nth-child(3) {
+      grid-column: 5/7;
+      min-height: 300px;
+    }
+    &__card:nth-child(4) {
+      grid-column: 1/7;
+      min-height: 300px;
+    }
+    &__card:nth-child(5) {
+      grid-column: 1/7;
+      order: 1;
+      min-height: 300px;
+    }
+    &__card:nth-child(6) {
+      grid-column: 1/4;
+      min-height: 307px;
+    }
+    &__card:nth-child(7) {
+      grid-column: 4/7;
+      min-height: 307px;
+    }
+    &__article {
+      position: relative;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .fuji__picture {
+    min-height: 300px;
+    background-image: url("../img/fuji_768.png");
+  }
+  .fuji {
+    &__article {
+      padding: 30px 0 30px 30px;
+    }
+    &__content {
+      margin-bottom: 44px;
+      width: 43%;
+    }
+
+    &__desc {
+      line-height: 22px;
+    }
+  }
+  .article-title {
+    margin-bottom: 5px;
+  }
+  .subject__desc {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .project {
+    &__article {
+      padding: 30px 0 30px 30px;
+    }
+    &__content {
+      margin-bottom: 92px;
+      width: 43%;
+    }
+  }
+  .project__picture {
+    min-height: 300px;
+    background-image: url("../img/project_768.png");
+  }
+  .landscape__picture {
+    background-image: url("../img/landscape1024.webp");
+  }
+  .portretman__picture {
+    background-image: url("../img/portretman1024.webp");
+  }
+  .subject__picture {
+    background-image: url("../img/subject768.png");
+  }
+  .retouch__picture {
+    background-image: url("../img/retouch_768.png");
+  }
+  .portretwoman__picture {
+    background-image: url("../img/portretwoman_1024.png");
+  }
+}
+@media (max-width: 576px) and (min-width: 320px) {
+  .projects {
+    padding-top: 45px;
+    padding-bottom: 31px;
+    &__grid {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+    &__card:nth-child(2) {
+      min-height: 255px;
+    }
+    &__card:nth-child(3) {
+      min-height: 254px;
+    }
+    &__card:nth-child(5) {
+      order: 1;
+    }
+    &__title {
+      margin-bottom: 13px;
+      font-size: 18px;
+    }
+    &__article {
+      position: relative;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .project__picture {
+    position: relative;
+    min-height: 422px;
+    background-image: url("../img/project_320.png");
+  }
+  .project {
+    &__desc {
+      margin-bottom: 21px;
+      font-size: 14px;
+      line-height: 18px;
+    }
+    &__article {
+      padding-top: 196px;
+    }
+    &__content {
+      margin-bottom: 0;
+      width: 80%;
+    }
+  }
+  .landscape__picture {
+    position: relative;
+    background-image: url("../img/landscape320.webp");
+  }
+  .portretman__picture {
+    position: relative;
+    background-image: url("../img/portretman320.webp");
+  }
+  .portretwoman__picture {
+    position: relative;
+    background-image: url("../img/portretwoman_320.png");
+  }
+  .subject__picture {
+    position: relative;
+    background-image: url("../img/subject320.png");
+  }
+  .retouch__picture {
+    position: relative;
+    background-image: url("../img/retouch_320.png");
+  }
+  .article-title {
+    margin-bottom: 9px;
+  }
+  .fuji__picture {
+    position: relative;
+    min-height: 422px;
+    background-image: url("../img/fuji_320.png");
+  }
+  .label {
+    padding: 5px 14px;
+    top: 5px;
+    right: 5px;
+    font-size: 12px;
+  }
+  .fuji {
+    &__article {
+      padding-top: 196px;
+    }
+    &__content {
+      margin-bottom: 0;
+      width: 80%;
+    }
+    &__desc {
+      margin-bottom: 15px;
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+  .fuji-data {
+    margin-bottom: 7px;
+  }
+  .about-btn {
+    padding: 7.5px 18px;
+    font-size: 14px;
+  }
+  .subject__desc {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+}
